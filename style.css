@@ -130,86 +130,62 @@
 
 /* Media Queries */
 
-@media (max-width: 414px) {
+@media only screen and (max-width: 767px) {
   #hero {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    height: 100vh;
     gap: 2rem;
+    height: 100vh; /* Use viewport height */
+    padding: 20px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding in height calculation */
+  }
+
+  .banner {
+    width: 100%; /* Use full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  .profile-photo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  .title-main {
+    color: #50b6ff;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 10px; /* Adjust spacing */
+  }
+
+  .title-second {
+    color: #5df3ee;
+    font-weight: 500;
+    margin-top: 5px; /* Adjust spacing */
+  }
+
+  .link-list {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin-top: 20px;
+  }
+
+  #main {
+    width: 90%; /* Use a percentage width */
+    max-width: 350px; /* Limit maximum width */
+    border-radius: 20px;
+    background-color: rgba(127, 255, 212, 0.2); /* Adjust transparency */
+    color: white;
+    padding: 20px; /* Increase padding for better spacing */
+    font-size: 14px;
+  }
 }
 
-.banner {
-  width: 414px;
-  height: 1080px;
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-.profile-photo {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  margin: 0%;
-  padding: 0%;
-}
-
-.title-main {
-  position: absolute;
-  top: 20px;
-  left: 80px;
-  color: #50b6ff;
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 700;
-  font-style: bold;
-  font-size: 2rem;
-  padding: 0%;
-  margin: 0%;
-}
-
-.title-second {
-  position: absolute;
-  top: 28px;
-  left: 200px;
-  color: #5df3ee;
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  padding: 0%;
-  margin: 0%;
-}
-
-.link-list {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  list-style: none;
-  position: relative;
-}
-
-#main {
-  display: flex;
-  flex-direction: column;
-  font-size: 12px;
-  height: 450%;
-  width: 350px;
-  border: solid white 1px;
-  border-radius: 20px 20px 20px 20px;
-  background-color: rgba(127, 255, 212, 0.195);
-  color: white;
-  padding: 10px;
-  margin: 10px 10px 10px 13px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  letter-spacing: 0.2rem;
-}
-
-} 
+/* Add other media queries and their respective styles as needed */
